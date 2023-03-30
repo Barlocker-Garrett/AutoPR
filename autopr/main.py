@@ -3,6 +3,9 @@ from typing import Optional, Any
 import openai
 from git.repo import Repo
 
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 from .models.artifacts import Issue
 from .services.commit_service import CommitService
 from .services.diff_service import GitApplyService, PatchService
