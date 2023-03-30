@@ -50,6 +50,7 @@ class GenerationService:
 
         # Get the commit messages and relevant filepaths
         pr_desc = self.pull_request_agent.plan_pull_request(repo, issue, event)
+        log.debug("Pr desc...", value=pr_desc)
 
         is_published = False
         for current_commit in pr_desc.commits:

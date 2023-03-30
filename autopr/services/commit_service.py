@@ -54,12 +54,7 @@ class CommitService:
 
         # Add and commit all
         self.repo.git.execute(["git", "add", "."])
-        # Check if commit message is empty or only whitespace
-        commit_message = commit.commit_message.strip()
-        if commit_message:
-            self.repo.git.execute(["git", "commit", "-m", commit.commit_message])
-        else:
-            self.repo.git.execute(["git", "commit", "--allow-empty"])
+        self.repo.git.execute(["git", "commit", "--allow-empty", "-m", commit.commit_message])
 
         # Push branch to remote
         log.debug(f'Pushing branch {self.branch_name} to remote...')
