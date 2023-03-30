@@ -236,7 +236,7 @@ def create_unidiff_validator(repo: Repo, diff_service: DiffService):
             log.debug("Fixing unidiff...", value=error.value)
 
             tree = repo.head.commit.tree
-            value = error.value
+            value = error.get('value')
             lines = value.splitlines()
 
             # Drop any `diff --git` lines
