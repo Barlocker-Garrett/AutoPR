@@ -26,7 +26,7 @@ class PromptRail(pydantic.BaseModel):
         return prompt_params
 
     def trim_params(self) -> bool:
-        log.warning("Naively trimming params", rail=self)
+        # log.warning("Naively trimming params", rail=self)
         prompt_params = dict(self)
         # If there are any lists, remove the last element of the first one you find
         for key, value in prompt_params.items():
