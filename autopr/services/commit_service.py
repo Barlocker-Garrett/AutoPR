@@ -58,7 +58,7 @@ class CommitService:
         commit_message = commit.commit_message.strip()
         if commit_message:
             self.repo.git.execute(["git", "commit", "-m", commit.commit_message])
-        elif:
+        else:
             self.repo.git.execute(["git", "commit", "--allow-empty"])
 
         # Push branch to remote
