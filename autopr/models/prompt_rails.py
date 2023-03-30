@@ -46,8 +46,7 @@ The issue is:
 The list of files in the repo is:
 ```{{filepaths_with_token_lengths}}```
 
-Should we take a look at any files? If so, pick only a few files (max {{token_limit}} tokens). 
-If looking at files would be a waste of time with regard to the issue, let me know."""
+Should we take a look at any files? If so, pick only a few files (max {{token_limit}} tokens)."""
 
     output_type = InitialFileSelectResponse
     extra_params = {
@@ -83,8 +82,7 @@ The list of files in the repo that we haven't taken a look at yet:
 ```{{filepaths_with_token_lengths}}```
 
 Take some notes that will help us plan our code commits, in an effort to close the issue. 
-Also, should we take a look at any other files? If so, pick only a few files (max {{token_limit}} tokens). 
-If looking at files would be a waste of time with regard to the issue, let me know."""
+Also, should we take a look at any other files? If so, pick only a few files (max {{token_limit}} tokens)."""
 
     output_type = LookAtFilesResponse
     extra_params = {
